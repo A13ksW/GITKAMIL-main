@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Kontakt</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylespanel.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href=""><i class="fa-brands fa-google-plus"></i></a>
+      </div>
+    </div>
+
+    <header class="header">
+      <a href="index.html" class="logo">DreamHotel ★★★★★</a>
+      <span class="menu-button" onclick="toggleMenu()">&#9776;</span>
+      <!-- Hamburger button -->
+      <nav class="navbar background" id="navbar">
+        <ul>
+          <a href="hotel.html">Hotel</a>
+          <a href="Galeria.html">Galeria</a>
+          <a href="Rezerwacje.html">Rezerwacje</a>
+          <a href="Panel.html">Panel</a>
+          <a href="strona-kontaktowa.html">Kontakt</a>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      function toggleMenu() {
+        var navbar = document.getElementById('navbar');
+        navbar.classList.toggle('responsive');
+        var contentElements = document.querySelectorAll('body > *:not(header)');
+        contentElements.forEach(function (element) {
+          element.classList.toggle('hidden');
+        });
+      }
+    </script>
+    <div class="container">
+      <h1>Panel Administracyjny</h1>
+      <div class="AdminPanel">
+        <form action="">
+          <div class="input-box">
+            <input type="text" placeholder="Login" required />
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Hasło" required />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox" />Zapamiętaj mnie</label>
+            <p><a href="#">Zapomniałeś hasła?</a></p>
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <div class="register-link">
+            <p>
+              Nie posiadasz konta?
+              <a href="#">Zarejestruj się</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

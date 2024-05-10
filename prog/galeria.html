@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Hotel</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Galeria</h1>
+      <p></p>
+    </div>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <a href=""><i class="fa-brands fa-google-plus"></i></a>
+      </div>
+    </div>
+
+    <header class="header">
+      <a href="index.html" class="logo" onclick="toggleMenu()"
+        >DreamHotel ★★★★★</a
+      >
+      <span class="menu-button" onclick="toggleMenu()">&#9776;</span>
+      <!-- Hamburger button -->
+      <nav class="navbar background" id="navbar">
+        <a href="hotel.html">Hotel</a>
+        <a href="Galeria.html">Galeria</a>
+        <a href="Rezerwacje.html">Rezerwacje</a>
+        <a href="Panel.html">Panel</a>
+        <a href="strona-kontaktowa.html">Kontakt</a>
+      </nav>
+    </header>
+
+    <script>
+      function toggleMenu() {
+        var navbar = document.getElementById('navbar');
+        navbar.classList.toggle('responsive');
+        var contentElements = document.querySelectorAll('body > *:not(header)');
+        contentElements.forEach(function (element) {
+          element.classList.toggle('hidden');
+        });
+      }
+    </script>
+  </body>
+</html>
